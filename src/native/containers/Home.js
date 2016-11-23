@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import { scene } from '../../common/styles';
 
-function Home() {
-  return (
-    <View style={{ alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
-      <Text>Home</Text>
-    </View>
-  );
+class Home extends Component {
+  static route = {
+    navigationBar: {
+      visible: false
+    }
+  }
+
+  render() {
+    return (
+      <View style={scene}>
+        <Text>Home</Text>
+      </View>
+    );
+  }
 }
 
 export default Home;

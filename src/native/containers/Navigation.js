@@ -1,13 +1,15 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { NavigationProvider } from '@exponent/ex-navigation';
-import routes from '../routes';
+import { View } from 'react-native';
+import { NavigationProvider, StackNavigation } from '@exponent/ex-navigation';
+import router from '../routes';
 
-function Navigation({ children }) {
+function Navigation({ children, style }) {
   return (
-    <NavigationProvider router={routes}>
-      <StatusBar barStyle="light-content" />
-      {children}
+    <NavigationProvider router={router}>
+      <StackNavigation
+        id="master"
+        initialRoute={router.getRoute('app')}
+      />
     </NavigationProvider>
   );
 }

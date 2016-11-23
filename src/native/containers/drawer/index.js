@@ -5,7 +5,8 @@ import {
   DrawerNavigation,
   DrawerNavigationItem,
 } from '@exponent/ex-navigation';
-import routes from '../routes';
+import { router, defaultRouteConfig } from '../../routes';
+import styles from './styles';
 
 function AppDrawer({ width }) {
   return (
@@ -13,7 +14,6 @@ function AppDrawer({ width }) {
       id='main'
       initialItem='home'
       drawerWidth={width}
-      renderHeader={() => <View />}
     >
       <DrawerNavigationItem
         id='home'
@@ -21,7 +21,8 @@ function AppDrawer({ width }) {
       >
         <StackNavigation
           id='home'
-          initialRoute={routes.getRoute('home')}
+          initialRoute={router.getRoute('home')}
+          defaultRouteConfig={defaultRouteConfig}
         />
       </DrawerNavigationItem>
     </DrawerNavigation>
