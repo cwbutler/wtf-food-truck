@@ -17,5 +17,16 @@
   },
   "packagerOpts": {
     "assetExts": ["ttf", "mp4"]
+  },
+  "ios": {
+    "bundleIdentifier": "org.cwbapps.wtfTruck"
+  },
+  "android": {
+    "package": "org.cwbapps.wtfTruck",
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyDR37zqNEzMZ1HMd4BpFC1mgUW5rveHwDo"
+      }
+    }
   }
 }
