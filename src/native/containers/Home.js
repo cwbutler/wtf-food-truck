@@ -13,7 +13,10 @@ class Home extends Component {
     return (
       <View style={scene}>
         <View style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Image source={require('../../assets/logo.png')} />
+          <Image
+            source={require('../../assets/logo.png')}
+            style={{ width: 320, resizeMode: 'contain' }}
+          />
         </View>
         
         <Text style={[text]}>Tap Here To Enter</Text>

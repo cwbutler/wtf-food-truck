@@ -5,11 +5,14 @@ import Footer from './footer';
 
 const bgStyle = {
   flexGrow: 1,
-  resizeMode: 'contain',
+  resizeMode: 'contain',  
+  width: null,
+  height: null,
+  justifyContent: 'center',
+  alignItems: 'center',
   paddingLeft: 10,
   paddingRight: 10,
-  alignItems: 'center',
-  justifyContent: 'center'
+  alignSelf: 'stretch'
 };
 
 function SceneBG({ children, style }) {
