@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import { Linking, View, Text, TouchableOpacity } from 'react-native';
-import { scene } from '../../common/styles';
 import SceneBg from '../components/SceneBg';
+import Social from '../components/Social';
+import { text } from '../../common/styles';
 
 const phone_number = '(662)-694-9832';
-
-const textStyle = {
-  color: 'white',
-  textAlign: 'center',
-  fontSize: 20
-};
+const email = 'cookingwiththeodoms@gmail.com';
 
 class Contact extends Component {
   static route = {
@@ -21,33 +17,42 @@ class Contact extends Component {
   render() {
     return (
       <SceneBg>
-        <Text style={[textStyle]}>Need To Place Your Order?</Text>
-        <Text style={[textStyle]}>Don't Wait In Line...</Text>
-        <Text style={[textStyle]}>CALL AHEAD</Text>
+        <Text style={[text]}>Need To Place Your Order?</Text>
+        <Text style={[text]}>Don't Wait In Line...</Text>
+        <Text style={[text]}>CALL AHEAD</Text>
 
         <View style={{ marginTop: 50, marginBottom: 50 }}>
           <TouchableOpacity onPress={this._call}>
-            <Text style={[textStyle, { fontSize: 30 }]}>{phone_number}</Text>
+            <Text style={[text, { fontSize: 30, fontWeight: 'bold' }]}>
+              {phone_number}
+            </Text>
           </TouchableOpacity>
         </View>
 
         <View style={{ marginBottom: 20 }}>
-          <Text style={[textStyle, { fontSize: 16 }]}>
+          <Text style={[text, { fontSize: 16, marginBottom: 20 }]}>
             For catering events, inquires, & special orders,
             please email us:
           </Text>
-          <Text style={[textStyle, { fontSize: 16 }]}>cookingwiththeodoms@gmail.com</Text>
+          
+          <TouchableOpacity onPress={this._email}>
+            <Text style={[text, { fontSize: 18, fontWeight: 'bold' }]}>
+              {email}
+            </Text>
+          </TouchableOpacity>
         </View>
 
-        <Text style={[textStyle]}>FOLLOW US!</Text>
-        <View>
-        </View>
+        <Social />
       </SceneBg>
     );
   }
 
   _call() {
     Linking.openURL(`tel:${phone_number}`);
+  }
+
+  _email() {
+    Linking.openURL(`mailto:${email}`)
   }
 }
 
