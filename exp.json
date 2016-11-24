@@ -1,6 +1,6 @@
 {
   "name": "wtf-food-truck",
-  "description": "An empty new project",
+  "description": "WTF@ Food Truck mobile application",
   "slug": "wtf-food-truck",
   "sdkVersion": "11.0.0",
   "version": "1.0.0",
@@ -13,6 +13,7 @@
   },
   "loading": {
     "iconUrl": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
+    "backgroundColor": "#80202A",
     "hideExponentText": false
   },
   "packagerOpts": {
