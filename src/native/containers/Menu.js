@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { scene } from '../../common/styles';
+import { View, Image } from 'react-native';
+import SceneBg from '../components/SceneBg';
 
 class Menu extends Component {
   static route = {
@@ -11,9 +11,8 @@ class Menu extends Component {
 
   render() {
     return (
-      <View style={scene}>
-        <Text>Menu</Text>
-      </View>
+      <SceneBg>
+      </SceneBg>
     );
   }
 }

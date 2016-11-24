@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import Exponent from 'exponent';
 import {
   StackNavigation,
   DrawerNavigation,
@@ -12,8 +13,8 @@ import Item from './Item';
 function AppDrawer({ width = DRAWER_WIDTH }) {
   return (
     <DrawerNavigation
-      id='main'
-      initialItem='location'
+      id='drawer'
+      initialItem='home'
       drawerWidth={width}
       drawerStyle={styles.container}
     >

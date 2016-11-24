@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import { scene } from '../../common/styles';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { scene, text } from '../../common/styles';
 
 class Home extends Component {
   static route = {
@@ -12,9 +12,20 @@ class Home extends Component {
   render() {
     return (
       <View style={scene}>
-        <Text>Home</Text>
+        <View style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Image source={require('../../assets/logo.png')} />
+        </View>
+        
+        <Text style={[text]}>Tap Here To Enter</Text>
+        <TouchableOpacity onPress={this._enter}>
+          <Image source={require('../../assets/Truck.png')} />
+        </TouchableOpacity>
       </View>
     );
+  }
+
+  _enter = () => {
+    this.props.navigation.getNavigator('drawer').jumpToItem('location');
   }
 }
 
